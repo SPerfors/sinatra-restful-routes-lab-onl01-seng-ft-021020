@@ -29,7 +29,7 @@ class ApplicationController < Sinatra::Base
   end
   
   patch '/recipes/:id' do 
-    binding.protect_from_forgery
+    binding.pry 
     @recipe = Recipe.all.find_by_id(params[:id])
     @recipe.name = params[:name]
     @recipe.ingredients = params[:ingredients]
